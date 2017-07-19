@@ -1,0 +1,23 @@
+﻿@model List<WebApplication1.Models.Producto>
+
+@{
+    ViewBag.Title = "Productos";
+}
+<h3>@ViewBag.Title</h3>
+<h3>@ViewBag.Message</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cadena</th>
+            <th>Propiedades</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.Cadena</td>
+            </tr>
+        }
+    </tbody>
+</table>

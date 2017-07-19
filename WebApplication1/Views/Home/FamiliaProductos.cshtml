@@ -1,0 +1,26 @@
+﻿@model List<WebApplication1.Models.FamiliaProducto>
+
+@{
+    ViewBag.Title = "Familia de productos";
+}
+<h3>@ViewBag.Title</h3>
+<h3>@ViewBag.Message</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Nombre Sub Familia</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var familia in Model)
+        {
+            <tr>
+                <td>@familia.nombre</td>
+                <td>@familia.nombreSubFamiliaActual</td>
+                <td>@familia.categoria</td>
+            </tr>
+        }
+    </tbody>
+</table>
